@@ -1,0 +1,8 @@
+{
+  "label": "فضای ابری S3",
+  "position": 16,
+  "link": {
+    "type": "doc",
+    "id": "16-object-storage/index"
+  }
+}

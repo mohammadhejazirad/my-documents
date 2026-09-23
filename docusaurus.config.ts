@@ -102,6 +102,7 @@ const config: Config = {
             {label: 'داکر', to: '/docs/05-docker'},
             {label: 'Nginx', to: '/docs/06-nginx'},
             {label: 'دیتابیس', to: '/docs/07-databases'},
+            {label: 'فضای ابری', to: '/docs/16-object-storage'},
           ],
         },
         {

@@ -241,6 +241,11 @@ DNS و SSL در فصل شبکه است تا یک مرجع داشته باشند.
 | `04-server-management/ffmpeg.md` | FFmpeg | 3 |
 | `04-server-management/chromium.md` | Chromium headless | 4 |
 | `04-server-management/clamav.md` | ClamAV و freshclam | 5 |
+| `04-server-management/safe-upgrade.md` | به‌روزرسانی بدون از دست رفتن داده | 6 |
+| `04-server-management/disk-grow.md` | بزرگ کردن دیسک | 7 |
+| `04-server-management/base-packages.md` | بسته‌های پایه | 8 |
+| `04-server-management/swap.md` | فایل swap | 9 |
+| `04-server-management/google-chrome.md` | Chrome for Testing از مخزن تیم | 10 |
 
 ### 05-docker
 
@@ -344,6 +349,9 @@ DNS و SSL در فصل شبکه است تا یک مرجع داشته باشند.
 | `11-networking/domain-binding.md` | وصل کردن دامنه به سرور | 4 |
 | `11-networking/ssl-letsencrypt.md` | Let's Encrypt، Certbot، تمدید ۹۰روزه | 5 |
 | `11-networking/ssl-commercial.md` | گواهی پولی: خرید، نصب، تمدید | 6 |
+| `11-networking/cdn-origin.md` | دامنه پشت IP سرور | 7 |
+| `11-networking/arvancloud.md` | ابرآروان | 8 |
+| `11-networking/cloudflare.md` | Cloudflare | 9 |
 
 ### 12-monitoring
 
@@ -396,6 +404,17 @@ DNS و SSL در فصل شبکه است تا یک مرجع داشته باشند.
 | `15-portal/index.md` | این پورتال چیست و چطور توسعه داده می‌شود | 1 |
 | `15-portal/deployment.md` | اجرای محلی، بیلد، Docker، Nginx میزبان | 2 |
 
+### 16-object-storage — فضای شیء S3
+
+| فایل | موضوع | جایگاه |
+| --- | --- | --- |
+| `16-object-storage/index.md` | نقشهٔ فصل | 1 |
+| `16-object-storage/concepts.md` | مفهوم S3 | 2 |
+| `16-object-storage/minio-server.md` | MinIO روی سرور | 3 |
+| `16-object-storage/minio-docker.md` | MinIO با Docker | 4 |
+| `16-object-storage/managed-s3.md` | آروان، R2 و AWS | 5 |
+| `16-object-storage/clients.md` | کلاینت S3 | 6 |
+
 ---
 
 ## Checklist
@@ -430,6 +449,9 @@ DNS و SSL در فصل شبکه است تا یک مرجع داشته باشند.
 [x] فصل Monitoring
 [x] فصل Bash و اتوماسیون
 [x] فصل Troubleshooting
+[x] دامنه با ابرآروان و Cloudflare
+[x] فضای ابری و MinIO
+[x] Chrome for Testing و به‌روزرسانی امن سرور
 [x] بیلد موفق npm run build
 ```
 
