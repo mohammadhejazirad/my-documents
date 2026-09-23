@@ -1,0 +1,7 @@
+services:
+  docs:
+    build: .
+    image: devops-docs:local
+    ports:
+      - "8080:80"
+    restart: unless-stopped

@@ -1,0 +1,8 @@
+{
+  "label": "لینوکس",
+  "position": 2,
+  "link": {
+    "type": "doc",
+    "id": "01-linux/index"
+  }
+}

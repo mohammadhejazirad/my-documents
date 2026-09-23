@@ -1,0 +1,8 @@
+{
+  "label": "CI/CD",
+  "position": 10,
+  "link": {
+    "type": "doc",
+    "id": "09-cicd/index"
+  }
+}

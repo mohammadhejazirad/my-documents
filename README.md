@@ -1,43 +1,39 @@
-# Website
+# دانشنامه DevOps
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+پورتال مستندات داخلی برای اداره سرور Ubuntu، کانتینر، استقرار، دیتابیس و امنیت. متن فارسی و راست‌چین است، دستورها انگلیسی‌اند، و فونت متن Vazirmatn است.
 
-## Installation
+نقشه کار برای کسی که این مخزن را ادامه می‌دهد در [README_AGENT.md](README_AGENT.md) است.
+
+## پیش‌نیاز
+
+- Node.js 22 یا جدیدتر
+- npm 10 یا جدیدتر
+- برای اجرای کانتینری: Docker Engine و پلاگین Compose v2
+
+## اجرای محلی
 
 ```bash
 npm install
+npm start
 ```
 
-**Note**: feel free to use the package manager of your choice.
+سایت توسعه روی پورت پیش‌فرض Docusaurus بالا می‌آید. تغییر Markdown بلافاصله دیده می‌شود.
 
-## Local Development
-
-```bash
-npm run start
-```
-
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
-
-## Build
+## بیلد ایستا
 
 ```bash
 npm run build
+npm run serve
 ```
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+خروجی در پوشه `build` است.
 
-## Deployment
-
-Using SSH:
+## اجرا با Docker
 
 ```bash
-USE_SSH=true npm run deploy
+docker compose up --build
 ```
 
-Not using SSH:
+پورتال روی پورت `8080` میزبان در دسترس است. جزئیات Nginx میزبان، آدرس production و محدودیت جستجوی فارسی در فصل «همین پورتال» نوشته شده است.
 
-```bash
-GIT_USER=<Your GitHub username> npm run deploy
-```
-
-If you are using GitHub Pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+قبل از انتشار، مقدار `url` در `docusaurus.config.ts` را به آدرس واقعی دانشنامه عوض کنید.

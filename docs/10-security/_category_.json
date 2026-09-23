@@ -1,0 +1,8 @@
+{
+  "label": "امنیت",
+  "position": 11,
+  "link": {
+    "type": "doc",
+    "id": "10-security/index"
+  }
+}

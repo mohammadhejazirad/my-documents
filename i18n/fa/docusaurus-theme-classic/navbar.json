@@ -1,0 +1,18 @@
+{
+  "title": {
+    "message": "دانشنامه DevOps",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "نشان دانشنامه DevOps",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.مستندات": {
+    "message": "مستندات",
+    "description": "Navbar item with label مستندات"
+  },
+  "item.label.استقرار پورتال": {
+    "message": "استقرار پورتال",
+    "description": "Navbar item with label استقرار پورتال"
+  }
+}

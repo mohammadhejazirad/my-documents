@@ -1,0 +1,8 @@
+{
+  "label": "استقرار",
+  "position": 9,
+  "link": {
+    "type": "doc",
+    "id": "08-deployment/index"
+  }
+}

@@ -1,30 +1,110 @@
-/**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
- */
+@import '@fontsource/vazirmatn/arabic-400.css';
+@import '@fontsource/vazirmatn/arabic-500.css';
+@import '@fontsource/vazirmatn/arabic-700.css';
+@import '@fontsource/vazirmatn/latin-400.css';
+@import '@fontsource/vazirmatn/latin-500.css';
+@import '@fontsource/vazirmatn/latin-700.css';
+@import '@fontsource/vazirmatn/latin-ext-400.css';
+@import '@fontsource/vazirmatn/latin-ext-500.css';
+@import '@fontsource/vazirmatn/latin-ext-700.css';
 
-/* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-color-primary: #0f4c81;
+  --ifm-color-primary-dark: #0d4474;
+  --ifm-color-primary-darker: #0c406d;
+  --ifm-color-primary-darkest: #0a345a;
+  --ifm-color-primary-light: #11558e;
+  --ifm-color-primary-lighter: #125994;
+  --ifm-color-primary-lightest: #1a6aad;
+  --ifm-font-family-base: 'Vazirmatn', 'Vazir', sans-serif;
+  --ifm-heading-font-family: 'Vazirmatn', 'Vazir', sans-serif;
+  --ifm-font-family-monospace: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    'Liberation Mono', 'Courier New', monospace;
+  --ifm-font-size-base: 17px;
+  --ifm-line-height-base: 1.9;
+  --ifm-heading-line-height: 1.45;
+  --ifm-code-font-size: 90%;
+  --ifm-navbar-height: 4.25rem;
+  --ifm-global-radius: 8px;
+  --docusaurus-highlighted-code-line-bg: rgba(15, 76, 129, 0.12);
+  --search-local-modal-width: 680px;
+  --search-local-hit-height: 68px;
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-color-primary: #8ebff5;
+  --ifm-color-primary-dark: #6aabf2;
+  --ifm-color-primary-darker: #5aa2f0;
+  --ifm-color-primary-darkest: #2d86ea;
+  --ifm-color-primary-light: #b3d4f8;
+  --ifm-color-primary-lighter: #c3defa;
+  --ifm-color-primary-lightest: #e5f2fd;
+  --docusaurus-highlighted-code-line-bg: rgba(142, 191, 245, 0.16);
+  --ifm-background-color: #12161c;
+  --ifm-background-surface-color: #1a212b;
+}
+
+html {
+  font-family: var(--ifm-font-family-base);
+}
+
+.markdown {
+  font-size: 1.02rem;
+}
+
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4 {
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.markdown h2 {
+  margin-top: 2.4rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.markdown li {
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+}
+
+.markdown table {
+  display: table;
+  width: 100%;
+}
+
+pre,
+code,
+kbd,
+samp,
+.prism-code {
+  font-family: var(--ifm-font-family-monospace);
+  direction: ltr;
+  unicode-bidi: isolate;
+  text-align: left;
+}
+
+div[class*='codeBlockContainer'],
+div[class*='codeBlockContent'],
+pre[class*='prism-code'] {
+  direction: ltr;
+  text-align: left;
+}
+
+.markdown :not(pre) > code {
+  direction: ltr;
+  unicode-bidi: isolate;
+  padding: 0.1rem 0.35rem;
+}
+
+blockquote {
+  border-right: 4px solid var(--ifm-color-primary);
+  border-left: none;
+}
+
+[class*='admonition'] {
+  font-size: 0.98rem;
 }

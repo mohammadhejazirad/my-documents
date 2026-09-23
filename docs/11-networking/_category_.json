@@ -1,0 +1,8 @@
+{
+  "label": "شبکه، DNS و SSL",
+  "position": 12,
+  "link": {
+    "type": "doc",
+    "id": "11-networking/index"
+  }
+}

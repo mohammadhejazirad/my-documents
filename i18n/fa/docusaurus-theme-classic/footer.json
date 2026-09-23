@@ -1,0 +1,58 @@
+{
+  "link.title.عملیات روزمره": {
+    "message": "عملیات روزمره",
+    "description": "The title of the footer links column with title=عملیات روزمره in the footer"
+  },
+  "link.title.مسیر تا Production": {
+    "message": "مسیر تا Production",
+    "description": "The title of the footer links column with title=مسیر تا Production in the footer"
+  },
+  "link.title.همین پورتال": {
+    "message": "همین پورتال",
+    "description": "The title of the footer links column with title=همین پورتال in the footer"
+  },
+  "link.item.label.لینوکس": {
+    "message": "لینوکس",
+    "description": "The label of footer link with label=لینوکس linking to /docs/01-linux"
+  },
+  "link.item.label.داکر": {
+    "message": "داکر",
+    "description": "The label of footer link with label=داکر linking to /docs/05-docker"
+  },
+  "link.item.label.Nginx": {
+    "message": "Nginx",
+    "description": "The label of footer link with label=Nginx linking to /docs/06-nginx"
+  },
+  "link.item.label.دیتابیس": {
+    "message": "دیتابیس",
+    "description": "The label of footer link with label=دیتابیس linking to /docs/07-databases"
+  },
+  "link.item.label.استقرار": {
+    "message": "استقرار",
+    "description": "The label of footer link with label=استقرار linking to /docs/08-deployment"
+  },
+  "link.item.label.CI/CD": {
+    "message": "CI/CD",
+    "description": "The label of footer link with label=CI/CD linking to /docs/09-cicd"
+  },
+  "link.item.label.امنیت": {
+    "message": "امنیت",
+    "description": "The label of footer link with label=امنیت linking to /docs/10-security"
+  },
+  "link.item.label.عیب‌یابی": {
+    "message": "عیب‌یابی",
+    "description": "The label of footer link with label=عیب‌یابی linking to /docs/14-troubleshooting"
+  },
+  "link.item.label.معرفی": {
+    "message": "معرفی",
+    "description": "The label of footer link with label=معرفی linking to /docs/intro"
+  },
+  "link.item.label.اجرا با Docker": {
+    "message": "اجرا با Docker",
+    "description": "The label of footer link with label=اجرا با Docker linking to /docs/15-portal/deployment"
+  },
+  "copyright": {
+    "message": "دانشنامه داخلی DevOps. نمونهٔ آموزشی برای تیم فنی؛ رمز و آدرس آزمایشگاه را در محیط واقعی جایگزین کنید.",
+    "description": "The footer copyright"
+  }
+}

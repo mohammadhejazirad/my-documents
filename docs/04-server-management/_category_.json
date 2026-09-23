@@ -1,0 +1,8 @@
+{
+  "label": "ابزارهای سرور",
+  "position": 5,
+  "link": {
+    "type": "doc",
+    "id": "04-server-management/index"
+  }
+}
