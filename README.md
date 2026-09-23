@@ -6,27 +6,53 @@
 
 ## پیش‌نیاز
 
-- Node.js 22 یا جدیدتر
-- npm 10 یا جدیدتر
+- Node.js 24 (همان `.nvmrc`). موتور پروژه `>=20` را هم قبول می‌کند، ولی CI روی 24 است.
+- npm و فایل `package-lock.json`
 - برای اجرای کانتینری: Docker Engine و پلاگین Compose v2
 
-## اجرای محلی
+## Development
 
 ```bash
-npm install
-npm start
+npm ci
+npm run start
 ```
 
-سایت توسعه روی پورت پیش‌فرض Docusaurus بالا می‌آید. تغییر Markdown بلافاصله دیده می‌شود.
+سایت توسعه از ریشهٔ لوکال بالا می‌آید. تغییر Markdown بلافاصله دیده می‌شود. راست‌چین، وزیرمتن، جستجو و هر دو حالت رنگ در همین حالت قابل دیدن‌اند.
 
-## بیلد ایستا
+## Local Build
 
 ```bash
 npm run build
 npm run serve
 ```
 
-خروجی در پوشه `build` است.
+این بیلد برای پیش‌نمایش محلی و Docker است و `baseUrl` آن `/` است. خروجی در `build/` است و نباید commit شود.
+
+## Deployment
+
+انتشار عمومی با GitHub Actions انجام می‌شود، نه با دستور دستی روی سرور. جزئیات، DNS، HTTPS و برگشت نسخه در [DEPLOYMENT.md](DEPLOYMENT.md) است.
+
+## GitHub Pages
+
+مخزن `mohammadhejazirad/my-documents` است. تا وقتی دامنهٔ اختصاصی نباشد، آدرس سایت:
+
+```text
+https://mohammadhejazirad.github.io/my-documents/
+```
+
+هر push به `main` بیلد را می‌سازد و فقط پوشهٔ `build` را به Pages می‌فرستد. Pull request فقط بیلد را امتحان می‌کند و سایت زنده را عوض نمی‌کند.
+
+## Contribution
+
+از `main` شاخه بسازید، pull request بدهید، و بعد از سبز شدن CI و review به `main` merge کنید. همان merge سایت را منتشر می‌کند.
+
+```bash
+git checkout -b docs/subject
+git commit -m "docs: ..."
+git push -u origin docs/subject
+```
+
+پیشوندهای commit: `docs`، `fix`، `feat`، `chore`، `ci`، `style`، `refactor`.
 
 ## اجرا با Docker
 
@@ -34,6 +60,4 @@ npm run serve
 docker compose up --build
 ```
 
-پورتال روی پورت `8080` میزبان در دسترس است. جزئیات Nginx میزبان، آدرس production و محدودیت جستجوی فارسی در فصل «همین پورتال» نوشته شده است.
-
-قبل از انتشار، مقدار `url` در `docusaurus.config.ts` را به آدرس واقعی دانشنامه عوض کنید.
+پورتال روی پورت `8080` میزبان از ریشه سرو می‌شود. این مسیر جدا از GitHub Pages است. جزئیات Nginx میزبان در فصل «همین پورتال» دانشنامه است.

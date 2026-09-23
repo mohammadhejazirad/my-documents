@@ -455,6 +455,30 @@ DNS و SSL در فصل شبکه است تا یک مرجع داشته باشند.
 [x] بیلد موفق npm run build
 ```
 
+## GitHub Deployment
+
+```text
+[x] Inspect Docusaurus configuration
+[x] Verify package manager
+[x] Verify Node.js version
+[x] Configure GitHub Pages
+[x] Create CI workflow
+[x] Create deployment workflow
+[x] Configure dependency cache
+[x] Configure Pages artifact
+[x] Configure permissions
+[x] Configure concurrency
+[x] Add manual deployment
+[x] Update .gitignore
+[x] Add DEPLOYMENT.md
+[x] Test local production build
+[ ] Push repository to GitHub
+[ ] Enable GitHub Pages
+[ ] Verify first GitHub Actions run
+[ ] Verify production URL
+[ ] Configure custom domain (optional)
+```
+
 ---
 
 ## Agent Continuation Guide
@@ -548,3 +572,28 @@ docker compose up --build
 ```
 
 سایت کانتینری روی پورت `8080` میزبان منتشر می‌شود.
+
+## Deployment Continuation State
+
+Last completed task:
+`npm ci` و `GITHUB_ACTIONS=true npm run build` سبز شد. خروجی `dir=rtl`، `lang=fa`، فونت Vazirmatn، `baseUrl` برابر `/my-documents/`، و `robots.txt` با نقشهٔ `https://mohammadhejazirad.github.io/my-documents/sitemap.xml` را داشت.
+
+Next task:
+صاحب مخزن باید commit را به `origin/main` پوش کند، در Settings → Pages منبع را GitHub Actions بگذارد، و اولین اجرای workflow را ببیند.
+
+Blocked tasks:
+هیچ تنظیم GitHub (Pages source، ruleset شاخه، دامنه) از این محیط قابل تغییر نیست.
+
+Manual actions required from owner:
+- commit و push به `https://github.com/mohammadhejazirad/my-documents`
+- Settings → Pages → Build and deployment → Source → GitHub Actions
+- باز کردن Actions و سبز شدن Deploy GitHub Pages
+- باز کردن `https://mohammadhejazirad.github.io/my-documents/`
+- اختیاری: ruleset برای اجبار CI روی `main`
+- اختیاری: دامنهٔ اختصاصی طبق DEPLOYMENT.md. تا آن روز `static/CNAME` نساز.
+
+Production URL:
+`https://mohammadhejazirad.github.io/my-documents/` بعد از اولین استقرار. قبل از آن این آدرس 404 است.
+
+Repository:
+`https://github.com/mohammadhejazirad/my-documents`

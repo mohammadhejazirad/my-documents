@@ -1,0 +1,26 @@
+name: Documentation bug
+description: توضیح یا دستور یک صفحه با رفتار واقعی سرور نمی‌خواند.
+title: "docs: "
+labels:
+  - documentation
+body:
+  - type: input
+    id: page
+    attributes:
+      label: صفحه
+      placeholder: docs/06-nginx/reverse-proxy.md
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: چه چیزی انتظار داشتید
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: چه چیزی دیدید
+      description: خروجی دستور یا متن صفحه را بگذارید. رمز، کلید و توکن را حذف کنید.
+    validations:
+      required: true

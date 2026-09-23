@@ -1,0 +1,13 @@
+name: Content request
+description: موضوعی که در دانشنامه نیست و برای کار واقعی لازم است.
+title: "docs: "
+labels:
+  - documentation
+body:
+  - type: textarea
+    id: topic
+    attributes:
+      label: موضوع
+      description: بگویید روی چه سیستمی لازم است و چه تصمیمی را باید پوشش دهد.
+    validations:
+      required: true

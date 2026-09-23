@@ -1,6 +1,46 @@
+import fs from 'fs';
+import path from 'path';
 import {themes as prismThemes} from 'prism-react-renderer';
-import type {Config} from '@docusaurus/types';
+import type {Config, Plugin} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
+
+const organizationName = 'mohammadhejazirad';
+const projectName = 'my-documents';
+
+function withTrailingSlash(value: string): string {
+  return value.endsWith('/') ? value : `${value}/`;
+}
+
+function resolveSiteUrl(): {url: string; baseUrl: string} {
+  const urlOverride = process.env.DOCUSAURUS_URL;
+  const baseOverride = process.env.DOCUSAURUS_BASE_URL;
+  if (urlOverride && baseOverride) {
+    return {url: urlOverride.replace(/\/$/, ''), baseUrl: withTrailingSlash(baseOverride)};
+  }
+  if (process.env.GITHUB_ACTIONS === 'true') {
+    return {
+      url: `https://${organizationName}.github.io`,
+      baseUrl: `/${projectName}/`,
+    };
+  }
+  return {url: 'https://docs.example.internal', baseUrl: '/'};
+}
+
+const {url, baseUrl} = resolveSiteUrl();
+
+function robotsTxtPlugin(): Plugin {
+  return {
+    name: 'robots-txt',
+    async postBuild({outDir, siteConfig}) {
+      const sitemap = new URL(
+        'sitemap.xml',
+        `${siteConfig.url}${withTrailingSlash(siteConfig.baseUrl)}`,
+      ).toString();
+      const body = `User-agent: *\nAllow: /\nSitemap: ${sitemap}\n`;
+      await fs.promises.writeFile(path.join(outDir, 'robots.txt'), body);
+    },
+  };
+}
 
 const config: Config = {
   title: 'دانشنامه DevOps',
@@ -11,8 +51,10 @@ const config: Config = {
     v4: true,
   },
 
-  url: 'https://docs.example.internal',
-  baseUrl: '/',
+  url,
+  baseUrl,
+  organizationName,
+  projectName,
 
   onBrokenLinks: 'throw',
   onBrokenAnchors: 'warn',
@@ -48,6 +90,10 @@ const config: Config = {
       } satisfies Preset.Options,
     ],
   ],
+
+  plugins: [function robotsTxt() {
+    return robotsTxtPlugin();
+  }],
 
   themes: [
     [
