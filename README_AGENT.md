@@ -472,10 +472,10 @@ DNS و SSL در فصل شبکه است تا یک مرجع داشته باشند.
 [x] Update .gitignore
 [x] Add DEPLOYMENT.md
 [x] Test local production build
-[ ] Push repository to GitHub
-[ ] Enable GitHub Pages
-[ ] Verify first GitHub Actions run
-[ ] Verify production URL
+[x] Push repository to GitHub
+[x] Enable GitHub Pages
+[x] Verify first GitHub Actions run
+[x] Verify production URL
 [ ] Configure custom domain (optional)
 ```
 
@@ -579,21 +579,17 @@ Last completed task:
 `npm ci` و `GITHUB_ACTIONS=true npm run build` سبز شد. خروجی `dir=rtl`، `lang=fa`، فونت Vazirmatn، `baseUrl` برابر `/my-documents/`، و `robots.txt` با نقشهٔ `https://mohammadhejazirad.github.io/my-documents/sitemap.xml` را داشت.
 
 Next task:
-صاحب مخزن باید commit را به `origin/main` پوش کند، در Settings → Pages منبع را GitHub Actions بگذارد، و اولین اجرای workflow را ببیند.
+اختیاری است: ruleset برای اجبار CI روی `main`، و اگر دامنهٔ واقعی آمد تنظیم Custom Domain طبق `DEPLOYMENT.md`.
 
 Blocked tasks:
-هیچ تنظیم GitHub (Pages source، ruleset شاخه، دامنه) از این محیط قابل تغییر نیست.
+ندارد. مخزن عمومی است و Pages با منبع GitHub Actions روشن است.
 
 Manual actions required from owner:
-- commit و push به `https://github.com/mohammadhejazirad/my-documents`
-- Settings → Pages → Build and deployment → Source → GitHub Actions
-- باز کردن Actions و سبز شدن Deploy GitHub Pages
-- باز کردن `https://mohammadhejazirad.github.io/my-documents/`
-- اختیاری: ruleset برای اجبار CI روی `main`
-- اختیاری: دامنهٔ اختصاصی طبق DEPLOYMENT.md. تا آن روز `static/CNAME` نساز.
+- اختیاری: ruleset تا merge بدون سبز شدن CI ممکن نباشد.
+- اختیاری: دامنهٔ اختصاصی. تا آن روز `static/CNAME` نساز.
 
 Production URL:
-`https://mohammadhejazirad.github.io/my-documents/` بعد از اولین استقرار. قبل از آن این آدرس 404 است.
+`https://mohammadhejazirad.github.io/my-documents/` زنده است. صفحهٔ اصلی، مقدمه و فصل لینوکس کد ۲۰۰ می‌دهند و `html` با `lang=fa` و `dir=rtl` است.
 
 Repository:
 `https://github.com/mohammadhejazirad/my-documents`
