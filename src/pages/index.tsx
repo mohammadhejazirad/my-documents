@@ -27,6 +27,7 @@ const chapters: Chapter[] = [
   {href: '/docs/16-object-storage', title: 'فضای ابری', text: 'S3، MinIO روی سرور یا Docker، آروان، R2 و AWS'},
   {href: '/docs/12-monitoring', title: 'پایش', text: 'لاگ، Netdata، Prometheus و Grafana'},
   {href: '/docs/13-automation', title: 'Bash', text: 'اسکریپت بکاپ، سلامت سرور و استقرار'},
+  {href: '/docs/17-ansible', title: 'Ansible', text: 'اینونتوری، Playbook، نقش، Vault و اجرای تکراری روی چند سرور'},
   {href: '/docs/14-troubleshooting', title: 'عیب‌یابی', text: 'سرور خاموش، دیسک پر، نشت حافظه و دیتابیس کند'},
 ];
 

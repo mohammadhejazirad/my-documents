@@ -415,6 +415,25 @@ DNS و SSL در فصل شبکه است تا یک مرجع داشته باشند.
 | `16-object-storage/managed-s3.md` | آروان، R2 و AWS | 5 |
 | `16-object-storage/clients.md` | کلاینت S3 | 6 |
 
+### 17-ansible
+
+نسخهٔ پیش‌فرض گرهٔ کنترل بستهٔ Ubuntu 26.04 است: `ansible` حدود ۱۳.۱ با `ansible-core` ۲.۲۰.۱. سری جاری جامعه در سپتامبر ۲۰۲۶ سری ۱۴.۴ با هستهٔ ۲.۲۱.۴ است و فقط با `pipx` نصب می‌شود، نه به‌جای بستهٔ توزیع مگر تیم عمداً بخواهد. ۲.۲۲ بتا است و نوشته نمی‌شود.
+
+| فایل | موضوع | جایگاه |
+| --- | --- | --- |
+| `17-ansible/index.md` | نقشهٔ فصل | 1 |
+| `17-ansible/concepts.md` | مفهوم | 2 |
+| `17-ansible/installation.md` | نصب | 3 |
+| `17-ansible/inventory.md` | اینونتوری | 4 |
+| `17-ansible/ad-hoc.md` | دستور تک‌باره | 5 |
+| `17-ansible/playbooks.md` | Playbook | 6 |
+| `17-ansible/variables.md` | متغیر و fact | 7 |
+| `17-ansible/templates.md` | قالب و handler | 8 |
+| `17-ansible/roles.md` | نقش | 9 |
+| `17-ansible/vault.md` | Vault | 10 |
+| `17-ansible/production.md` | Playbook تولید | 11 |
+| `17-ansible/troubleshooting.md` | عیب‌یابی | 12 |
+
 ---
 
 ## Checklist

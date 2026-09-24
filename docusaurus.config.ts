@@ -149,6 +149,7 @@ const config: Config = {
             {label: 'Nginx', to: '/docs/06-nginx'},
             {label: 'دیتابیس', to: '/docs/07-databases'},
             {label: 'فضای ابری', to: '/docs/16-object-storage'},
+            {label: 'Ansible', to: '/docs/17-ansible'},
           ],
         },
         {
